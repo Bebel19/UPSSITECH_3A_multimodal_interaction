@@ -1,0 +1,26 @@
+
+// Listing content
+Voici le contenu de votre assiette XX
+Votre délicieuse assiette contient XX
+
+
+// Removing
+Je retire X de votre assiette
+Dommage le X est délicieux, je le retire
+
+// Adding
+J'ajoute X a votre assiette
+Vous voulez X ? Tres bon choix !
+
+
+// Reset
+
+Recommencons votre assiette 
+Oh ca fait 3 fois qu'on recommence ca fait beaucoup là non
+
+// Exteme cases
+
+Il y a trop de choses dans votre assiette je ne peux plus rien ajouter petit gourmand
+Le resto est fermé revenez plus tard
+ 
+

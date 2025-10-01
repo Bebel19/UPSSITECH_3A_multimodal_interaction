@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+         version="1.0" root="command" mode="voice" xml:lang="en-US">
+
+  <rule id="command" scope="public">
+    <one-of>
+      <!-- Add commands -->
+      <item>
+        add <ruleref uri="#item"/> to my plate
+        <tag>out.action="add"; out.item="<item>";</tag>
+      </item>
+      <item>
+        put <ruleref uri="#item"/> on my plate
+        <tag>out.action="add"; out.item="<item>";</tag>
+      </item>
+      <item>
+        include <ruleref uri="#item"/> on my plate
+        <tag>out.action="add"; out.item="<item>";</tag>
+      </item>
+
+      <!-- Remove commands -->
+      <item>
+        remove <ruleref uri="#item"/> from my plate
+        <tag>out.action="remove"; out.item="<item>";</tag>
+      </item>
+      <item>
+        delete <ruleref uri="#item"/> from my plate
+        <tag>out.action="remove"; out.item="<item>";</tag>
+      </item>
+      <item>
+        take off <ruleref uri="#item"/> from my plate
+        <tag>out.action="remove"; out.item="<item>";</tag>
+      </item>
+
+      <!-- List commands -->
+      <item>
+        what's on my plate
+        <tag>out.action="list";</tag>
+      </item>
+      <item>
+        show me my plate
+        <tag>out.action="list";</tag>
+      </item>
+      <item>
+        what do I have on my plate
+        <tag>out.action="list";</tag>
+      </item>
+
+      <!-- Clear commands -->
+      <item>
+        clear my plate
+        <tag>out.action="clear";</tag>
+      </item>
+      <item>
+        reset my plate
+        <tag>out.action="clear";</tag>
+      </item>
+      <item>
+        empty my plate
+        <tag>out.action="clear";</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="item" scope="private">
+    <one-of>
+      <!-- Drinks -->
+      <item>coffee<tag>out="coffee"</tag></item>
+      <item>black coffee<tag>out="coffee"</tag></item>
+      <item>tea<tag>out="tea"</tag></item>
+      <item>green tea<tag>out="tea"</tag></item>
+      <item>orange juice<tag>out="orange_juice"</tag></item>
+      <item>apple juice<tag>out="apple_juice"</tag></item>
+      <item>lemonade<tag>out="lemonade"</tag></item>
+      <item>water<tag>out="water"</tag></item>
+      <item>sparkling water<tag>out="water"</tag></item>
+      <item>hot chocolate<tag>out="hot_chocolate"</tag></item>
+
+      <!-- Desserts -->
+      <item>crème brûlée<tag>out="creme_brulee"</tag></item>
+      <item>profiteroles<tag>out="profiteroles"</tag></item>
+      <item>tiramisu<tag>out="tiramisu"</tag></item>
+      <item>chocolate cake<tag>out="chocolate_cake"</tag></item>
+      <item>cheesecake<tag>out="cheesecake"</tag></item>
+      <item>apple pie<tag>out="apple_pie"</tag></item>
+      <item>ice cream<tag>out="ice_cream"</tag></item>
+      <item>vanilla ice cream<tag>out="ice_cream"</tag></item>
+      <item>chocolate ice cream<tag>out="ice_cream"</tag></item>
+      <item>panna cotta<tag>out="panna_cotta"</tag></item>
+      <item>macaron<tag>out="macaron"</tag></item>
+      <item>éclair<tag>out="eclair"</tag></item>
+      <item>brownie<tag>out="brownie"</tag></item>
+      <item>fruit tart<tag>out="fruit_tart"</tag></item>
+      <item>mousse<tag>out="mousse"</tag></item>
+      <item>chocolate mousse<tag>out="mousse"</tag></item>
+      <item>flan<tag>out="flan"</tag></item>
+      <item>custard<tag>out="custard"</tag></item>
+      <item>baklava<tag>out="baklava"</tag></item>
+      <item>donut<tag>out="donut"</tag></item>
+      <item>churros<tag>out="churros"</tag></item>
+    </one-of>
+  </rule>
+</grammar>
+

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+         version="1.0" root="commande" mode="voice" xml:lang="fr-FR">
+
+  <rule id="commande" scope="public">
+    <one-of>
+      <!-- Commandes d'ajout -->
+      <item>
+        ajoute <ruleref uri="#element"/> à mon assiette
+        <tag>out.action="ajouter"; out.element="<element>";</tag>
+      </item>
+      <item>
+        mets <ruleref uri="#element"/> sur mon assiette
+        <tag>out.action="ajouter"; out.element="<element>";</tag>
+      </item>
+      <item>
+        je veux <ruleref uri="#element"/> sur mon assiette
+        <tag>out.action="ajouter"; out.element="<element>";</tag>
+      </item>
+
+      <!-- Commandes de suppression -->
+      <item>
+        enlève <ruleref uri="#element"/> de mon assiette
+        <tag>out.action="enlever"; out.element="<element>";</tag>
+      </item>
+      <item>
+        retire <ruleref uri="#element"/> de mon assiette
+        <tag>out.action="enlever"; out.element="<element>";</tag>
+      </item>
+      <item>
+        supprime <ruleref uri="#element"/> de mon assiette
+        <tag>out.action="enlever"; out.element="<element>";</tag>
+      </item>
+
+      <!-- Commandes de liste -->
+      <item>
+        qu'est-ce qu'il y a sur mon assiette
+        <tag>out.action="lister";</tag>
+      </item>
+      <item>
+        montre-moi mon assiette
+        <tag>out.action="lister";</tag>
+      </item>
+      <item>
+        que contient mon assiette
+        <tag>out.action="lister";</tag>
+      </item>
+
+      <!-- Commandes de réinitialisation -->
+      <item>
+        vide mon assiette
+        <tag>out.action="reinitialiser";</tag>
+      </item>
+      <item>
+        efface tout de mon assiette
+        <tag>out.action="reinitialiser";</tag>
+      </item>
+      <item>
+        réinitialise mon assiette
+        <tag>out.action="reinitialiser";</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="element" scope="private">
+    <one-of>
+      <!-- Boissons -->
+      <item>café<tag>out="cafe"</tag></item>
+      <item>café noir<tag>out="cafe"</tag></item>
+      <item>thé<tag>out="the"</tag></item>
+      <item>thé vert<tag>out="the"</tag></item>
+      <item>jus d'orange<tag>out="jus_orange"</tag></item>
+      <item>jus de pomme<tag>out="jus_pomme"</tag></item>
+      <item>citronnade<tag>out="citronnade"</tag></item>
+      <item>eau<tag>out="eau"</tag></item>
+      <item>eau gazeuse<tag>out="eau"</tag></item>
+      <item>chocolat chaud<tag>out="chocolat_chaud"</tag></item>
+
+      <!-- Desserts -->
+      <item>crème brûlée<tag>out="creme_brulee"</tag></item>
+      <item>profiteroles<tag>out="profiteroles"</tag></item>
+      <item>tiramisu<tag>out="tiramisu"</tag></item>
+      <item>gâteau au chocolat<tag>out="gateau_chocolat"</tag></item>
+      <item>cheesecake<tag>out="cheesecake"</tag></item>
+      <item>tarte aux pommes<tag>out="tarte_pommes"</tag></item>
+      <item>sundae<tag>out="sundae"</tag></item>
+      <item>glace à la vanille<tag>out="glace"</tag></item>
+      <item>glace au chocolat<tag>out="glace"</tag></item>
+      <item>panna cotta<tag>out="panna_cotta"</tag></item>
+      <item>macaron<tag>out="macaron"</tag></item>
+      <item>éclair<tag>out="eclair"</tag></item>
+      <item>brownie<tag>out="brownie"</tag></item>
+      <item>tarte aux fruits<tag>out="tarte_fruits"</tag></item>
+      <item>mousse<tag>out="mousse"</tag></item>
+      <item>mousse au chocolat<tag>out="mousse"</tag></item>
+      <item>flan<tag>out="flan"</tag></item>
+      <item>crème pâtissière<tag>out="creme_patissiere"</tag></item>
+      <item>baklava<tag>out="baklava"</tag></item>
+      <item>beignet<tag>out="beignet"</tag></item>
+      <item>churros<tag>out="churros"</tag></item>
+    </one-of>
+  </rule>
+</grammar>
+
